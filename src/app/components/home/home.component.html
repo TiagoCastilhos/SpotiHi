@@ -1,0 +1,7 @@
+<div class="container">
+  <busy-indicator *ngIf="isBusy"></busy-indicator>
+  <playlists-listing [playlists]="playlists"></playlists-listing>
+  <button mat-fab id="add-playlist-button" color="primary" (click)="openCreatePlaylistDialog()">
+    <mat-icon id="icon" inline=true>add</mat-icon>
+  </button>
+</div>

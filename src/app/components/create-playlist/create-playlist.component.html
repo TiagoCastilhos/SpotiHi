@@ -1,0 +1,26 @@
+<div class="container">
+    <div>
+        <h3>
+            Criar playlist
+        </h3>
+        <div class="form-container">
+            <div class="playlist-container">
+                <mat-form-field class="form-field">
+                    <input matInput placeholder="Nome da playlist" [formControl]="playlistName" [(ngModel)]="playlist.name" required>
+                    <mat-error *ngIf="playlistName.invalid">Campo e obrigatorio</mat-error>
+                </mat-form-field>
+                <button mat-icon-button id="add-song-button" color="primary" (click)="addSong()"
+                    title="Adicionar musica">
+                    <mat-icon id="icon">add</mat-icon>
+                </button>
+            </div>
+            <div class="song-form-field" *ngFor="let song of playlist.songs">
+                <add-music [song]="song" [formGroup]="formGroup"></add-music>
+            </div>
+        </div>
+    </div>
+    <div class="buttons-container">
+        <button mat-flat-button color="primary" (click)="createPlaylist()" [disabled]="!isValid()">OK</button>
+        <button mat-flat-button color="warn" (click)="closeDialog()">Cancelar</button>
+    </div>
+</div>

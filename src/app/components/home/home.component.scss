@@ -1,0 +1,13 @@
+.container {
+
+    #add-playlist-button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 20px;
+
+        .material-icons {
+            font-size: 38px !important;
+        }
+    }
+}

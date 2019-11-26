@@ -1,0 +1,10 @@
+<div class="container">
+    <mat-form-field class="song-name-form-field">
+        <input matInput placeholder="Musica" [formControl]="songName" [(ngModel)]="song.name" required>
+        <mat-error *ngIf="songName.invalid">Campo e obrigatorio</mat-error>
+    </mat-form-field>
+    <mat-form-field class="artist-name-form-field">
+        <input matInput placeholder="Artista" [formControl]="artistName" [(ngModel)]="song.artist.name" required>
+        <mat-error *ngIf="artistName.invalid">Campo e obrigatorio</mat-error>
+    </mat-form-field>
+</div>
